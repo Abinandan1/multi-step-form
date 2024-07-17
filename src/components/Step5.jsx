@@ -1,5 +1,5 @@
 import { Wrapper } from "../wrappers/Step5";
-import icon from "../../public/assets/images/icon-thank-you.svg";
+import icon from "../assets/images/icon-thank-you.svg";
 const Step5 = () => {
   return (
     <Wrapper>
