@@ -1,5 +1,5 @@
 import { Wrapper } from "../wrappers/Navigation.js";
-import NavRow from "./NavRow.jsx";
+import NavRow from "./NavRow";
 
 const Navigation = () => {
   return (
