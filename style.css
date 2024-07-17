@@ -1,0 +1,314 @@
+@font-face {
+  font-family: ubuntuRegular;
+  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: ubuntuBold;
+  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: ubuntuMedium;
+  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ubuntuRegular;
+}
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  background: var(--magnolia);
+  height: 100vh;
+}
+.card {
+  width: 100%;
+  height: 100vh;
+}
+/* 
+=============
+NAVIGATION
+=============
+*/
+nav {
+  background: url(./assets/images/bg-sidebar-mobile.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  height: 200px;
+  padding-top: 2rem;
+}
+.nav-row {
+}
+.nav-row div {
+  display: none;
+}
+.nav-row span {
+  font-family: ubuntuMedium;
+  color: var(--white);
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  border: 2px solid var(--cool-gray);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+span.active-step {
+  color: var(--marine-blue);
+  background: var(--light-blue);
+  border-color: var(--light-blue);
+}
+
+/* 
+=============
+FORM
+=============
+*/
+form,
+.step-5 {
+  display: none;
+}
+.show-form {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  margin-top: -4rem;
+  background: var(--white);
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.form-1,
+.form-2 {
+  /* width: 90%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  margin-top: -4rem;
+  background: var(--white);
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+
+/* FORM HEADER */
+header {
+  margin-bottom: 1rem;
+}
+header h3 {
+  color: var(--marine-blue);
+  font-size: 1.5rem;
+  font-family: ubuntuMedium;
+  margin-bottom: 1rem;
+}
+header p {
+  color: var(--cool-gray);
+  line-height: 1.5;
+}
+/* FORM ROW */
+.form-row {
+  display: grid;
+  margin-bottom: 0.5rem;
+}
+.form-row label {
+  font-size: 0.875rem;
+  color: var(--marine-blue);
+  font-family: ubuntuMedium;
+  margin-bottom: 0.25rem;
+}
+.form-input {
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--light-gray);
+  padding: 0 1rem;
+  font-family: ubuntuMedium;
+}
+/* NEXT BUTTON */
+.btn-container {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: var(--white);
+}
+.btn {
+  background: var(--marine-blue);
+  color: var(--white);
+  border: transparent;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+/* FORM 2 */
+.plan-option {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--light-gray);
+  border-radius: 0.5rem;
+}
+.plan-option input[type="radio"] {
+  appearance: none;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.plan-option:has(input[type="radio"]:checked) {
+  border-color: var(--purplish-blue);
+  background: var(--alabaster);
+}
+.form-2 .form-row {
+  display: grid;
+  gap: 1rem;
+}
+.plan-info {
+  display: grid;
+  gap: 0.25rem;
+}
+.plan-name {
+  color: var(--marine-blue);
+  font-family: ubuntuBold;
+}
+.plan-price {
+  color: var(--cool-gray);
+}
+.form-row:has(.plan-type) {
+  margin-top: 1.5rem;
+}
+.plan-type {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--alabaster);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.plan-type-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--marine-blue);
+  border-radius: 2rem;
+  padding: 0.25rem;
+  width: 2.5rem;
+  height: 1.25rem;
+  justify-content: space-between;
+}
+.plan-type input[type="radio"] {
+  opacity: 0;
+  cursor: pointer;
+}
+.plan-type-slider span {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--white);
+  border-radius: 50%;
+  position: absolute;
+  left: 0.25rem;
+  transition: left 0.3s linear;
+}
+.plan-type-slider input[type="radio"]:nth-child(1):checked ~ span {
+  left: 0.25rem;
+}
+.plan-type-slider input[type="radio"]:nth-child(2):checked ~ span {
+  left: 1.5rem;
+}
+@media (768px >= width >= 450px) {
+  .show-form {
+    /* margin-top: -2rem; */
+  }
+}
+
+@media (width > 768px) {
+  .card {
+    width: 90%;
+    height: 80%;
+    max-width: 900px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    /* gap: 3rem; */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  nav {
+    background: url(./assets/images/bg-sidebar-desktop.svg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: start;
+    gap: 2rem;
+    border-radius: 0.5rem;
+  }
+  .nav-row {
+    display: flex;
+    gap: 1rem;
+    color: var(--white);
+  }
+  .nav-row div {
+    display: grid;
+  }
+  .nav-row div p {
+    font-size: 0.875rem;
+    color: var(--cool-gray);
+  }
+  .nav-row div h5 {
+    letter-spacing: 1px;
+  }
+  .show-form {
+    background: transparent;
+    box-shadow: none;
+    margin-top: 0;
+    display: grid;
+    align-content: start;
+    max-width: 510px;
+  }
+  .form-row label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .form-row {
+    margin-bottom: 1.5rem;
+  }
+  header {
+    margin-bottom: 2rem;
+  }
+  header h3 {
+    margin-bottom: 0.5rem;
+  }
+  .btn-container {
+    background: transparent;
+    position: relative;
+    padding: 0;
+    top: 4rem;
+  }
+}
