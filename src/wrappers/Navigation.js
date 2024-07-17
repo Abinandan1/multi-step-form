@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import bgImgMobile from "../assets/images/bg-sidebar-mobile.svg";
-import bgImgDesktop from "../assets/images/bg-sidebar-desktop.svg";
+import bgImgMobile from "/assets/images/bg-sidebar-mobile.svg";
+import bgImgDesktop from "/assets/images/bg-sidebar-desktop.svg";
 export const Wrapper = styled.nav`
   background: url(${bgImgMobile});
   background-repeat: no-repeat;
