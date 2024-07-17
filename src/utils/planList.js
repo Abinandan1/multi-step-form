@@ -1,6 +1,6 @@
-import icon1 from "../../public/assets/images/icon-arcade.svg";
-import icon2 from "../../public/assets/images/icon-advanced.svg";
-import icon3 from "../../public/assets/images/icon-pro.svg";
+import icon1 from "../assets/images/icon-arcade.svg";
+import icon2 from "../assets/images/icon-advanced.svg";
+import icon3 from "../assets/images/icon-pro.svg";
 
 export const icons = [icon1, icon2, icon3];
 
