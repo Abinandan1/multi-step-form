@@ -2,7 +2,10 @@ import styled from "styled-components";
 import bgImgMobile from "../../public/assets/images/bg-sidebar-mobile.svg";
 import bgImgDesktop from "../../public/assets/images/bg-sidebar-desktop.svg";
 export const Wrapper = styled.nav`
-  background: url(${bgImgMobile}) no-repeat center/cover;
+  background: url(${bgImgMobile});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -29,7 +32,10 @@ export const Wrapper = styled.nav`
     display: none;
   }
   @media (width > 768px) {
-    background: url(${bgImgDesktop}) no-repeat center/cover;
+    background: url(${bgImgDesktop});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     flex-direction: column;
     gap: 2rem;
     justify-content: start;
